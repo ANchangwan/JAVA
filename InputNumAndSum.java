@@ -1,4 +1,4 @@
-package kunsan.¾ÈÃ¢¿Ï1501023;
+
 
 import java.util.Scanner;
 import java.util.InputMismatchException;
@@ -7,10 +7,10 @@ public class InputNumAndSum {
 	Scanner input = new Scanner(System.in);
 	int numx, numy, sum = 0;
 	
-	public void InputNumSum() {// 4) Á¤¼ö x¿Í y¸¦ ÀÔ·Â¹Ş¾Æ, xºÎÅÍ y±îÁö ´õÇÏ´Â °úÁ¤°ú °á°ú º¸ÀÌ±â
+	public void InputNumSum() {// 4) ì •ìˆ˜ xì™€ yë¥¼ ì…ë ¥ë°›ì•„, xë¶€í„° yê¹Œì§€ ë”í•˜ëŠ” ê³¼ì •ê³¼ ê²°ê³¼ ë³´ì´ê¸°
 		
 		try {
-		System.out.println("Á¤¼ö x¿Í y¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		System.out.println("ì •ìˆ˜ xì™€ yë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 		numx = input.nextInt();
 		numy = input.nextInt();
 
@@ -21,7 +21,7 @@ public class InputNumAndSum {
 			InputNumSum2();
 		}
 		}catch(InputMismatchException e) {
-			System.out.println("Á¤¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+			System.out.println("ì •ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
 		}
 	}
 	
@@ -33,7 +33,7 @@ public class InputNumAndSum {
 			sum += i;
 			System.out.println("=" + sum);
 		}
-		System.out.println("ÇÕ°è : " + sum);
+		System.out.println("í•©ê³„ : " + sum);
 	}
 
 	public void InputNumSum2() {// 4)
@@ -42,6 +42,6 @@ public class InputNumAndSum {
 			sum += i;
 			System.out.println("=" + sum);
 		}
-		System.out.println("ÇÕ°è : " + sum);
+		System.out.println("í•©ê³„ : " + sum);
 	}
 }
