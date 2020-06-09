@@ -1,4 +1,4 @@
-package kunsan.¾ÈÃ¢¿Ï1501023;
+
 
 import java.util.Scanner;
 
@@ -9,10 +9,10 @@ public class InputGugudan {
 	Scanner input = new Scanner(System.in);
 
 	public void inputGuGudan2() {
-		System.out.println("¸î ´Ü ºÎ ÅÍ ¸î ´Ü ±îÁö ±¸±¸´ÜÀ» Ãâ·ÂÇÒ±î¿ä?(int, int) : ");
+		System.out.println("ëª‡ ë‹¨ ë¶€ í„° ëª‡ ë‹¨ ê¹Œì§€ êµ¬êµ¬ë‹¨ì„ ì¶œë ¥í• ê¹Œìš”?(int, int) : ");
 		start = input.nextInt();
 		end = input.nextInt();
-		System.out.println("¾î´À ¼ö ºÎÅÍ ¾î´À ¼ö ±îÁö °öÇÒ±î¿ä(int, int)");
+		System.out.println("ì–´ëŠ ìˆ˜ ë¶€í„° ì–´ëŠ ìˆ˜ ê¹Œì§€ ê³±í• ê¹Œìš”(int, int)");
 		to = input.nextInt();
 		from = input.nextInt();
 
