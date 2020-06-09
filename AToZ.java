@@ -1,4 +1,4 @@
-package kunsan.¾ÈÃ¢¿Ï1501023;
+
 
 import java.util.InputMismatchException;
 
@@ -12,7 +12,7 @@ class AToZ {
 		System.out.println();
 	
 	}catch(InputMismatchException e) {
-		System.out.println("´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		System.out.println("ë‹¤ì‹œ ìž…ë ¥í•´ì£¼ì„¸ìš”.");
 	}
 }
 
