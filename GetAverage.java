@@ -1,4 +1,4 @@
-package kunsan.¾ÈÃ¢¿Ï1501023;
+
 
 import java.util.Scanner;
 import java.util.InputMismatchException;
@@ -6,10 +6,10 @@ import java.util.InputMismatchException;
 public class GetAverage {
 	Scanner input = new Scanner(System.in);
 
-	public void getAverage() {// 2) ÀÔ·ÂµÈ ¼öÀÇ Æò±Õ°ú °¹¼ö ±¸ÇÏ±âÇØ¼­ È­¸é¿¡ ÇÁ¸°Æ®ÇÏ±â
+	public void getAverage() {// 2) ì…ë ¥ëœ ìˆ˜ì˜ í‰ê· ê³¼ ê°¯ìˆ˜ êµ¬í•˜ê¸°í•´ì„œ í™”ë©´ì— í”„ë¦°íŠ¸í•˜ê¸°
 
-		System.out.println("2) ÀÔ·ÂµÈ ¼öÀÇ Æò±Õ°ú °¹¼ö ±¸ÇÏ±âÇØ¼­ È­¸é¿¡ ÇÁ¸°Æ®ÇÏ±â");
-		System.out.println("-1À» ´©¸£¸é Á¾·áµË´Ï´Ù.");
+		System.out.println("2) ì…ë ¥ëœ ìˆ˜ì˜ í‰ê· ê³¼ ê°¯ìˆ˜ êµ¬í•˜ê¸°í•´ì„œ í™”ë©´ì— í”„ë¦°íŠ¸í•˜ê¸°");
+		System.out.println("-1ì„ ëˆ„ë¥´ë©´ ì¢…ë£Œë©ë‹ˆë‹¤.");
 		NumResult();
 	}
 
@@ -27,16 +27,16 @@ public class GetAverage {
 					count++;
 				}
 			} catch (InputMismatchException e) {
-				System.out.println("Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù.");
+				System.out.println("ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤.");
 				input.nextLine();
 			}
 		}
 		try {
 			average = sum / count;
-			System.out.println("ÀÔ·ÂµÈ ¼ö : " + count);
-			System.out.println("Æò±Õ : " + average);
+			System.out.println("ì…ë ¥ëœ ìˆ˜ : " + count);
+			System.out.println("í‰ê·  : " + average);
 		} catch (ArithmeticException e) {
-			System.out.println("0À» ³ª´­ ¼ö ¾ø½À´Ï´Ù.");
+			System.out.println("0ì„ ë‚˜ëˆŒ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		}
 	}
 }
