@@ -1,4 +1,4 @@
-package kunsan.¾ÈÃ¢¿Ï1501023;
+package kunsan.ì•ˆì°½ì™„1501023;
 
 import java.util.Arrays;
 import java.util.InputMismatchException;
@@ -7,38 +7,38 @@ import java.util.Scanner;
 class StudentGrade {
 
 	Scanner input = new Scanner(System.in);
-	
-	
+
 	void scoreSort(int[] student) {
 		int[] temp = new int[student.length];
-		for(int i=0;i<student.length;i++) {
+		for (int i = 0; i < student.length; i++) {
 			temp[i] = student[i];
 		}
 		Arrays.sort(temp);
-		for(int i=0;i<temp.length;i++) {
-			System.out.println((i+1)+"¹øÂ° ¼ºÀû Á¤·Ä : "+temp[i]);
+		for (int i = 0; i < temp.length; i++) {
+			System.out.println((i + 1) + "ë²ˆì§¸ ì„±ì  ì •ë ¬ : " + temp[i]);
 		}
-		
-		
-	}
-	
-	
-	void showAverageScoreAndMiddleScore(int[] student) {//5. ¼ºÀû Æò±Õ¼ºÀû, ¼ºÀû ÁßÀ§°ª ¼ºÀû
-		
-		int sum=0;
-		for(int i=0;i<student.length;i++) {
-			sum+=student[i];
-		}
-		System.out.println("Æò±Õ ¼ºÀû : "+(sum/student.length));
-		System.out.println("¼ºÀû ÁßÀ§°ª : "+student[(int)(student.length/2)]);
-		
-	}
-	
-	
-	
-	
 
-	void showMaxScoreAndMinScore(int[] student) {//4.¼ºÀûÀÇ ÃÖ°í¼ºÀû, ÃÖÀú¼ºÀû º¸±â
+	}
+
+	void showAverageScoreAndMiddleScore(int[] student) {// 5. ì„±ì  í‰ê· ì„±ì , ì„±ì  ì¤‘ìœ„ê°’ ì„±ì 
+
+		int sum = 0;
+		int size = student.length;
+		for (int i = 0; i < student.length; i++) {
+			sum += student[i];
+		}
+		System.out.println("í‰ê·  ì„±ì  : " + (sum / student.length));
+		if (size % 2 == 0) {
+			int m = size / 2;
+			int n = (size / 2) - 1;
+			System.out.println("ì„±ì  ì¤‘ìœ„ê°’ : " + (int) (student[m] + student[n]) / 2);
+		} else {
+			int m = size / 2;
+			System.out.println("ì„±ì  ì¤‘ìœ„ê°’ : " + student[m]);
+		}
+	}
+
+	void showMaxScoreAndMinScore(int[] student) {// 4.ì„±ì ì˜ ìµœê³ ì„±ì , ìµœì €ì„±ì  ë³´ê¸°
 
 		int max = 0;
 		int min = 100;
@@ -50,55 +50,74 @@ class StudentGrade {
 				min = student[i];
 
 		}
-		System.out.println("ÃÖ°í¼ºÀû : " + max);
-		System.out.println("ÃÖÀú¼ºÀû : " + min);
+		System.out.println("ìµœê³ ì„±ì  : " + max);
+		System.out.println("ìµœì €ì„±ì  : " + min);
 
 	}
 
-	void showWantStudentScore(int[] student) {//3.ÇĞ»ıÀÇ ¹øÈ£·Î ¼ºÀûº¸±â
-		System.out.println("º¸°í½ÍÀº ÇĞ»ıÀÇ ¼ºÀûÀ» ÀÔ·Â : ");
+	void showWantStudentScore(int[] student) {// 3.í•™ìƒì˜ ë²ˆí˜¸ë¡œ ì„±ì ë³´ê¸°
+		System.out.println("ë³´ê³ ì‹¶ì€ í•™ìƒì˜ ì„±ì ì„ ì…ë ¥ : ");
 		while (true) {
 			try {
 				int num = input.nextInt();
-				System.out.println(num + "¹ø ÇĞ»ı¼ºÀû" + student[num - 1]);
+				System.out.println(num + "ë²ˆ í•™ìƒì„±ì  :" + student[num - 1]);
 				break;
 			} catch (InputMismatchException e) {
-				System.out.println("´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä");
+				System.out.println("ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”");
 				input.nextLine();
 			}
 		}
 
 	}
 
-	void AllofScore(int[] student) {// 2.ÇĞ»ıÀüÃ¼¼ºÀû¸®½ºÆ® º¸±â
+	void AllofScore(int[] student) {// 2.í•™ìƒì „ì²´ì„±ì ë¦¬ìŠ¤íŠ¸ ë³´ê¸°
 
-		System.out.println("ÀüÃ¼ ÇĞ»ıÀÇ ¼ºÀû");
+		System.out.println("ì „ì²´ í•™ìƒì˜ ì„±ì ");
 		for (int i = 0; i < student.length; i++) {
-			System.out.println((i + 1) + "¹øÂ° ÇĞ»ı ¼ºÀû " + student[i]);
+			System.out.println((i + 1) + "ë²ˆì§¸ í•™ìƒ ì„±ì  " + student[i]);
 		}
 
 	}
-
-	int[] inputStudent() {
-		System.out.print("ÀÔ·ÂÇÒ ÇĞ»ıÀÇ ¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä. : ");
+	
+	int[] addStudent(int[] student, int numStudent, int index) {
+	      int[] temp = student;      
+	      student = new int[numStudent + index];
+	      
+	      for (int i = 0; i < index; i++) {
+	         student[i] = temp[i];
+	      }
+	      return student;
+	   }
+	
+	
+	int[] inputStudent(int[] student) {
+		System.out.print("ì…ë ¥í•  í•™ìƒì˜ ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”. : ");
 		int numStudent = input.nextInt();
-		int[] student = new int[numStudent];
-
-		for (int i = 0; i < student.length; i++) {
+		
+		int index=student.length;
+		
+		
+		
+		student=addStudent(student,numStudent,index);
+	
+		
+		for (int i = index; i < index+numStudent; i++) {
 			while (true) {
+	
 				try {
-					
-					System.out.print((i + 1) + "¹øÂ°  ÇĞ»ıÀÇ ¼ºÀû : ");
+
+					System.out.print((i + 1) + "ë²ˆì§¸  í•™ìƒì˜ ì„±ì  : ");
 					student[i] = input.nextInt();
-					if(100>student[i] && student[i]>0) {
-						break;	
-					}else {
-						System.out.println("0°ú 100»çÀÌ¸¦ ÀÔ·Â");
+					if (100 > student[i] && student[i] > 0) {
+						
+						break;
+					} else {
+						System.out.println("0ê³¼ 100ì‚¬ì´ë¥¼ ì…ë ¥");
 						input.nextLine();
 					}
-					
+
 				} catch (InputMismatchException e) {
-					System.out.println("Á¤¼ö¸¦ ÀÔ·ÁÇØÁÖ¼¼¿ä");
+					System.out.println("ì •ìˆ˜ë¥¼ ì…ë ¤í•´ì£¼ì„¸ìš”");
 					input.nextLine();
 				}
 			}
@@ -112,19 +131,19 @@ class StudentGrade {
 		int selectNum = 0;
 
 		while (true) {
-			System.out.println("1) ÇĞ»ı¼ºÀû ÀÔ·Â");
-			System.out.println("2) ÇĞ»ıÀüÃ¼¼ºÀû¸®½ºÆ® º¸±â");
-			System.out.println("3) ÇĞ»ıÀÇ ¹øÈ£·Î ¼ºÀûº¸±â");
-			System.out.println("4) ¼ºÀûÀÇ ÃÖ°í¼ºÀû, ÃÖÀú¼ºÀû º¸±â");
-			System.out.println("5) ¼ºÀû Æò±Õ¼ºÀû, ¼ºÀû ÁßÀ§°ª ¼ºÀû");
-			System.out.println("6) ¼ºÀû Á¤·ÄÇØ¼­ º¸±â");
-			System.out.println("0) ¸ŞÀÎ¸Ş´º·Î µ¹¾Æ°¨");
+			System.out.println("1) í•™ìƒì„±ì  ì…ë ¥");
+			System.out.println("2) í•™ìƒì „ì²´ì„±ì ë¦¬ìŠ¤íŠ¸ ë³´ê¸°");
+			System.out.println("3) í•™ìƒì˜ ë²ˆí˜¸ë¡œ ì„±ì ë³´ê¸°");
+			System.out.println("4) ì„±ì ì˜ ìµœê³ ì„±ì , ìµœì €ì„±ì  ë³´ê¸°");
+			System.out.println("5) ì„±ì  í‰ê· ì„±ì , ì„±ì  ì¤‘ìœ„ê°’ ì„±ì ");
+			System.out.println("6) ì„±ì  ì •ë ¬í•´ì„œ ë³´ê¸°");
+			System.out.println("0) ë©”ì¸ë©”ë‰´ë¡œ ëŒì•„ê°");
 
-			System.out.println("ÀÔ·Â : ");
+			System.out.println("ì…ë ¥ : ");
 			selectNum = input.nextInt();
 
 			if (selectNum == 1) {
-				student = inputStudent();
+				student = inputStudent(student);
 			}
 			if (selectNum == 2) {
 				AllofScore(student);
@@ -132,16 +151,16 @@ class StudentGrade {
 			if (selectNum == 3) {
 				showWantStudentScore(student);
 			}
-			if(selectNum == 4) {
+			if (selectNum == 4) {
 				showMaxScoreAndMinScore(student);
 			}
-			if(selectNum == 5) {
+			if (selectNum == 5) {
 				showAverageScoreAndMiddleScore(student);
 			}
-			if(selectNum == 6) {
+			if (selectNum == 6) {
 				scoreSort(student);
 			}
-			if(selectNum == 0) {
+			if (selectNum == 0) {
 				MenuController student1 = new MenuController();
 				student1.selectMenu();
 			}
