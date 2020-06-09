@@ -1,4 +1,4 @@
-package kunsan.¾ÈÃ¢¿Ï1501023;
+
 
 import java.util.Scanner;
 
@@ -6,11 +6,11 @@ class CoffeePrice {
 	Scanner input = new Scanner(System.in);
 	int price = 0;
 
-	void selectCoffeeMenu() {// 1) Ä¿ÇÇ ¸Ş´º¸¦ ³ÖÀ¸¸é °¡°İÀ» Ãâ·ÂÇØ ÁÖ´Â ÇÁ·Î±×·¥
+	void selectCoffeeMenu() {// 1) ì»¤í”¼ ë©”ë‰´ë¥¼ ë„£ìœ¼ë©´ ê°€ê²©ì„ ì¶œë ¥í•´ ì£¼ëŠ” í”„ë¡œê·¸ë¨
 		int addMenu = 0;
 		
 		for (;;) {
-			System.out.println("¸Ş´º¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä : ");
+			System.out.println("ë©”ë‰´ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš” : ");
 			String selectCoffee = input.next();
 			selectCoffee(selectCoffee);
 			if (price != 0) {
@@ -22,32 +22,32 @@ class CoffeePrice {
 
 	public void selectCoffee(String selectCoffee) {
 		switch (selectCoffee) {
-		case "¾Æ¸Ş¸®Ä«³ë":
+		case "ì•„ë©”ë¦¬ì¹´ë…¸":
 			coffeeMenu1();
 			break;
-		case "Ä«¶ó¸á¸¶³¢¾Æ¶Ç":
+		case "ì¹´ë¼ë©œë§ˆë¼ì•„ë˜":
 			coffeeMenu3();
 			break;
 		default:
-			System.out.println("¾ø´Â ¸Ş´ºÀÔ´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä");
+			System.out.println("ì—†ëŠ” ë©”ë‰´ì…ë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”");
 			selectCoffeeMenu();
 
 		}
 	}
 
 	public void coffeeMenu1() {
-		System.out.println("°¡°İ : 2000¿ø");
+		System.out.println("ê°€ê²© : 2000ì›");
 		price = 2000;
 
 	}
 
 	public void coffeeMenu2() {
-		System.out.println("°¡°İ : 2500¿ø");
+		System.out.println("ê°€ê²© : 2500ì›");
 		price = 2500;
 	}
 
 	public void coffeeMenu3() {
-		System.out.println("°¡°İ : 3500¿ø");
+		System.out.println("ê°€ê²© : 3500ì›");
 		price = 3500;
 	}
 }
