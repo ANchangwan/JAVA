@@ -1,4 +1,4 @@
-package kunsan.¾ÈÃ¢¿Ï1501023;
+
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -7,16 +7,16 @@ class MenuController {
 	Scanner input = new Scanner(System.in);
 
 	void selectsView() {
-		System.out.println("1) Ä¿ÇÇ ¸Ş´º¸¦ ³ÖÀ¸¸é °¡°İÀ» Ãâ·ÂÇØ ÁÖ´Â ÇÁ·Î±×·¥");
-		System.out.println("2) ÀÔ·ÂµÈ ¼öÀÇ Æò±Õ°ú °¹¼ö ±¸ÇÏ±âÇØ¼­ È­¸é¿¡ ÇÁ¸°Æ®ÇÏ±â");
-		System.out.println("3) ¾ËÆÄºª AºÎÅÍ Z±îÁö ÇÁ¸°Æ®ÇÏ±â");
-		System.out.println("4) Á¤¼ö x¿Í y¸¦ ÀÔ·Â¹Ş¾Æ, xºÎÅÍ y±îÁö ´õÇÏ´Â °úÁ¤°ú °á°ú º¸ÀÌ±â");
-		System.out.println("5) 99´Ü ´Ü¼ø Âï±â");
-		System.out.println("6) 99´Ü Ãâ·Â´Ü¼ö¿Í ¼öÀÇ ¹üÀ§ ¼³Á¤ÇØ¼­ ÇÁ¸°Æ®ÇÏ±â");
-		System.out.println("7) ÀºÇà ÇÁ·Î±×·¥");
-		System.out.println("8) ÇĞ»ı¼ºÀûÀÔ·Â");
-		System.out.println("0) Á¾·á");
-		System.out.print("¼±ÅÃ : ");
+		System.out.println("1) ì»¤í”¼ ë©”ë‰´ë¥¼ ë„£ìœ¼ë©´ ê°€ê²©ì„ ì¶œë ¥í•´ ì£¼ëŠ” í”„ë¡œê·¸ë¨");
+		System.out.println("2) ì…ë ¥ëœ ìˆ˜ì˜ í‰ê· ê³¼ ê°¯ìˆ˜ êµ¬í•˜ê¸°í•´ì„œ í™”ë©´ì— í”„ë¦°íŠ¸í•˜ê¸°");
+		System.out.println("3) ì•ŒíŒŒë²³ Aë¶€í„° Zê¹Œì§€ í”„ë¦°íŠ¸í•˜ê¸°");
+		System.out.println("4) ì •ìˆ˜ xì™€ yë¥¼ ì…ë ¥ë°›ì•„, xë¶€í„° yê¹Œì§€ ë”í•˜ëŠ” ê³¼ì •ê³¼ ê²°ê³¼ ë³´ì´ê¸°");
+		System.out.println("5) 99ë‹¨ ë‹¨ìˆœ ì°ê¸°");
+		System.out.println("6) 99ë‹¨ ì¶œë ¥ë‹¨ìˆ˜ì™€ ìˆ˜ì˜ ë²”ìœ„ ì„¤ì •í•´ì„œ í”„ë¦°íŠ¸í•˜ê¸°");
+		System.out.println("7) ì€í–‰ í”„ë¡œê·¸ë¨");
+		System.out.println("8) í•™ìƒì„±ì ì…ë ¥");
+		System.out.println("0) ì¢…ë£Œ");
+		System.out.print("ì„ íƒ : ");
 	}
 
 	void selectMenu() {
@@ -27,7 +27,7 @@ class MenuController {
 			try {
 				selectNum = input.nextInt();
 			} catch (InputMismatchException e) {
-				System.out.println("Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù ´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä.");
+				System.out.println("ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤ ë‹¤ì‹œ ì…ë ¥í•˜ì„¸ìš”.");
 				input.nextLine();
 				selectMenu();
 			}
