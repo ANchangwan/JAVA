@@ -1,4 +1,4 @@
-package kunsan.¾ÈÃ¢¿Ï1501023;
+
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -11,7 +11,7 @@ class Bank {
 	String stringNumber;
 
 	public void blance() {
-		System.out.println("ÀÜ¾× : " + bankBlance);
+		System.out.println("ì”ì•¡ : " + bankBlance);
 	}
 
 	public void withdraw() {
@@ -19,18 +19,18 @@ class Bank {
 
 		while (true) {
 			try {
-				System.out.println("Ãâ±İ¾× : ");
+				System.out.println("ì¶œê¸ˆì•¡ : ");
 				withdraw = input.nextInt();
 
 				if (bankBlance - withdraw >= 0) {
 					bankBlance -= withdraw;
-					System.out.println("ÀÜ°í: " + bankBlance);
+					System.out.println("ì”ê³ : " + bankBlance);
 				} else {
-					System.out.println("ÀÜ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+					System.out.println("ì”ì•¡ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 				}
 				break;
 			} catch (InputMismatchException e) {
-				System.out.println("´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä");
+				System.out.println("ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”");
 				input.nextLine();
 
 			}
@@ -40,15 +40,15 @@ class Bank {
 	public void saveingMoney() {
 		while (true) {
 			try {
-				System.out.println("¿¹±İ¾× : ");
+				System.out.println("ì˜ˆê¸ˆì•¡ : ");
 				myMoney = input.nextInt();
 				Math.addExact(bankBlance, myMoney);
 				bankBlance += myMoney;
-				System.out.println("ÃÑÇÕ : " + bankBlance);
+				System.out.println("ì´í•© : " + bankBlance);
 				break;
 
 			} catch (InputMismatchException e) {
-				System.out.println("¼ıÀÚ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+				System.out.println("ìˆ«ìë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
 				input = new Scanner(System.in);
 				continue;
 			}
@@ -58,11 +58,11 @@ class Bank {
 	public void MenuController() {
 		while (true) {
 			System.out.println("-----------------------");
-			System.out.println("1.¿¹±İ|2.Ãâ±İ|3.ÀÜ±İ|4.Á¾·á");
+			System.out.println("1.ì˜ˆê¸ˆ|2.ì¶œê¸ˆ|3.ì”ê¸ˆ|4.ì¢…ë£Œ");
 			System.out.println("-----------------------");
 
 			try {
-				System.out.print("¼±ÅÃ : ");
+				System.out.print("ì„ íƒ : ");
 				stringNumber = input.next();
 				selectNum = Integer.parseInt(stringNumber);
 
@@ -75,11 +75,11 @@ class Bank {
 				else if (selectNum == 4)
 					break;
 				else {
-					System.out.println("´Ù½Ã ´­·¯ÁÖ¼¼¿ä");
+					System.out.println("ë‹¤ì‹œ ëˆŒëŸ¬ì£¼ì„¸ìš”");
 					MenuController();
 				}
 			} catch (NumberFormatException e) {
-				System.out.println("Á¤¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+				System.out.println("ì •ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
 				input.nextLine();
 			}
 		}
