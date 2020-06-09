@@ -1,4 +1,3 @@
-package kunsan.안창완1501023;
 
 import java.util.Arrays;
 import java.util.InputMismatchException;
