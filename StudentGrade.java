@@ -7,7 +7,7 @@ class StudentGrade {
 
 	Scanner input = new Scanner(System.in);
 
-	void scoreSort(int[] student) {// 6.성적 
+	void scoreSort(int[] student) {// 6.성적 정렬
 		int[] temp = new int[student.length];
 		for (int i = 0; i < student.length; i++) {
 			temp[i] = student[i];
